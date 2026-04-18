@@ -1,0 +1,50 @@
+# Project TODO
+
+- [x] Restrict CMS access to authenticated admins only with role-based authorization
+- [x] Build admin dashboard overview with total yachts, published yachts, draft yachts, and quick links
+- [x] Build admin yacht listing page with name, type, status, and quick action buttons
+- [x] Build add-new-yacht form with name, type, guest capacity, price, description, details paragraphs, and feature key-value pairs
+- [x] Build edit-yacht workflow with full text editing, detail paragraph reordering/removal, and feature key-value editing
+- [x] Build photo management with multi-image upload, cover photo selection, reordering, deletion, and S3 storage
+- [x] Build custom-fields support so managers can add arbitrary key-value fields without code changes
+- [x] Build amenities editor with add, edit, reorder, and remove actions
+- [x] Build publish/unpublish toggle controlling public visibility per yacht
+- [x] Replace static fleet.ts usage with live database content for public catalog and experience pages
+- [x] Add database schema, queries, and API procedures for yacht content and media management
+- [x] Add tests covering admin access control and yacht content management flows
+- [x] Protect admin routes with redirect-based admin-only guarding instead of warning-only rendering
+- [x] Add explicit evidence in code/documentation that public catalog and yacht pages use live database procedures instead of any static fleet.ts source
+- [x] Add test coverage for non-admin blocking on protected CMS access
+- [x] Fix broken navigation and non-working buttons in the published Bonavista CMS
+- [x] Restore yacht inventory rendering in the published CMS and public/admin flows, with correct empty-state behavior when no yachts exist yet
+- [x] Grant admin access for the requested account komareusa@gmail.com
+- [x] Assess standard Google sign-in flow compatibility; the current Bonavista project uses Manus auth, while admin access is now granted by email for komareusa@gmail.com
+- [x] Verify the updated login flow on the running Bonavista CMS for / and /admin routes
+- [x] Confirm admin promotion behavior for komareusa@gmail.com on the updated build after first sign-in
+- [x] Create and verify a fresh checkpoint for the CMS fixes so the user can republish the corrected version
+- [x] Document clearly that the current project uses Manus auth and does not yet provide standalone Google OAuth sign-in
+- [x] Provide the user with the current simple public link for the Bonavista site
+- [x] Separate CMS entry onto its own distinct link and update navigation accordingly
+- [x] Verify the public site URL and CMS URL after routing changes on the running Bonavista deployment
+- [x] Verify why the currently published Bonavista domain opens the CMS-oriented experience instead of the expected marketing/public website
+- [x] Confirm the correct live public-site URL versus the CMS login URL and report both clearly to the user
+- [x] Compare existing Bonavista CMS fields with the current Bonavista page fields and the Barcelona Boat Rental yacht page fields
+- [x] Identify missing yacht content fields that should be added to Bonavista CMS based on the comparison
+- [x] Create a complete field list to add into Bonavista CMS for full parity with the Barcelona Boat Rental yacht page
+- [x] Add structured yacht specification fields for marina, rental terms, technical dimensions, model metadata, rules, and service details
+- [x] Add relational data structures for tiered pricing and extra fees required by the Barcelona Boat Rental-style yacht page
+- [x] Extend server-side yacht read/write procedures to persist and return the new structured fields and related pricing data
+- [x] Extend the CMS yacht editor UI to manage the new structured yacht fields, rules, equipment, included services, pricing tiers, and extra fees
+- [x] Update the public yacht detail page to render the new Barcelona Boat Rental-style data blocks
+- [x] Add or update Vitest coverage for the new yacht fields and pricing structures
+- [x] Investigate why the yacht editor does not show a visible save button in Bonavista CMS
+- [x] Investigate why a yacht card with uploaded photos is not persisted after editing in Bonavista CMS
+- [x] Decide and implement the intended draft behavior for unsaved yacht edits instead of silently losing entered data
+- [x] Investigate why a yacht with Published status in CMS does not appear in the public catalog
+- [x] Verify whether public yacht listing queries and public yacht detail queries are filtering or mapping published records incorrectly
+- [x] Fix the publication/display path so newly published yachts appear on the site without manual workarounds
+- [x] Show the current public catalog link clearly inside CMS so editors do not check outdated temporary site URLs
+- [ ] Verify the exact user-facing Bonavista site URL where the yacht should appear and fix any mismatch between that site and the CMS-backed public catalog
+- [ ] Investigate why the user-facing site at https://3002-ix0048fpxw4em89p5kzdy-bb8ae1a6.us2.manus.computer does not display yachts from the CMS database
+- [ ] Fix the user-facing public site so yachts published in the CMS database appear on the exact site URL the user is checking
+- [ ] Continue Bonavista debugging autonomously without pausing for implementation approval unless a sensitive action requires confirmation
